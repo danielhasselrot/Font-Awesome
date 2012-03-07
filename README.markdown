@@ -28,6 +28,6 @@ linking to the project page:
 
 What the output looks like:
 
-![screenshot](http://f.cl.ly/items/0h3O1z3l1C1x3k000a3A/fontawesome.png)
+![screenshot](http://f.cl.ly/items/3T3f473B0R1C3s0Q2K1u/fontawesome.png)
 
 
