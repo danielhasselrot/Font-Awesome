@@ -65,10 +65,10 @@ for d in xrange(min_codepoint, max_codepoint + 1):
         print >>f, unichr(d).encode('u8')
         
     for (icon_height, output_file_suffix) in ( ('50', '@2x'), ('25', '') ):
-        os.system('''convert -background none -size x54 \\
-       -font %(fontpath)s \\
-       -pointsize 72 -gravity North label:'@ch-%(icon_name)s' \\
-       -resize x%(icon_height)s \\
+        os.system(r'''convert -background none -size x54 \
+       -font %(fontpath)s \
+       -pointsize 72 -gravity North label:'@ch-%(icon_name)s' \
+       -resize x%(icon_height)s \
        %(output_file)s''' % {
         'fontpath': font_path,
         'icon_name': icon_name,
