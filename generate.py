@@ -59,23 +59,17 @@ for d in xrange(0xf000, 0xf094, 1):
     
     with file(codepoint_text_file, 'w') as f:
         print >>f, unichr(d).encode('u8')
-    os.system('''convert -background none -size x54 \\
-   -font %(fontpath)s \\
-   -pointsize 72 -gravity North label:'@ch-%(icon_name)s' \\
-   -resize x50 \\
-   %(output_file)s''' % {
-    'fontpath': font_path,
-    'icon_name': icon_name,
-    'output_file': os.path.join("png", "icon-%s@2x.png" % icon_name)
-    })
-    os.system('''convert -background none -size x54 \\
-    -font %(fontpath)s \\
-    -pointsize 72 -gravity North label:'@ch-%(icon_name)s' \\
-    -resize x25 \\
-    %(output_file)s''' % {
-     'fontpath': font_path,
-    'icon_name': icon_name,
-    'output_file': os.path.join("png", "icon-%s.png" % icon_name)
-     })
-     
+        
+    for (icon_height, output_file_suffix) in ( ('50', '@2x'), ('25', '') ):
+        os.system('''convert -background none -size x54 \\
+       -font %(fontpath)s \\
+       -pointsize 72 -gravity North label:'@ch-%(icon_name)s' \\
+       -resize x%(icon_height)s \\
+       %(output_file)s''' % {
+        'fontpath': font_path,
+        'icon_name': icon_name,
+        'icon_height': icon_height,
+        'output_file': os.path.join("png", "icon-%s%s.png" % (icon_name, output_file_suffix))
+        })
+             
     os.remove(codepoint_text_file)
