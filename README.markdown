@@ -20,6 +20,12 @@ generate.py is a script for converting Font Awesome icons to iOS tab bar icons.
 ImageMagick should be in the PATH and called 'convert', and the output is written
 to the directory 'png'.
 
+The script itself is under the simplified BSD license. The build products, a
+derivative work, are under the same license as the original contribution by 
+Dave Gandy, CC BY 3.0.  If you find the iOS tab bar icons useful, please consider
+linking to the project page:
+    https://github.com/jogloran/Font-Awesome
+
 What the output looks like:
 
 ![screenshot](http://f.cl.ly/items/0h3O1z3l1C1x3k000a3A/fontawesome.png)
