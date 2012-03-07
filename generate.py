@@ -62,6 +62,7 @@ for d in xrange(0xf000, 0xf094, 1):
     os.system('''convert -background none -size x54 \\
    -font %(fontpath)s \\
    -pointsize 72 -gravity North label:'@ch-%(icon_name)s' \\
+   -resize x50 \\
    %(output_file)s''' % {
     'fontpath': font_path,
     'icon_name': icon_name,
@@ -70,7 +71,7 @@ for d in xrange(0xf000, 0xf094, 1):
     os.system('''convert -background none -size x54 \\
     -font %(fontpath)s \\
     -pointsize 72 -gravity North label:'@ch-%(icon_name)s' \\
-    -resize 50%% \\
+    -resize x25 \\
     %(output_file)s''' % {
      'fontpath': font_path,
     'icon_name': icon_name,
