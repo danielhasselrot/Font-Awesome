@@ -44,7 +44,11 @@ font_path = os.path.join(os.getcwd(), 'font', 'fontawesome-webfont.ttf')
 def codepoint_to_name(codepoint):
     return codepoints_to_names.get(codepoint, None)
 
-for d in xrange(0xf000, 0xf094, 1):
+min_codepoint = min(codepoints_to_names.keys())
+max_codepoint = max(codepoints_to_names.keys())
+
+# xrange endpoint is not inclusive
+for d in xrange(min_codepoint, max_codepoint + 1):
     icon_name = codepoint_to_name(d)
     if icon_name is None: continue
     
