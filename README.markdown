@@ -16,7 +16,7 @@ in human-readable source code is considered acceptable attribution.
 
 
 ### Generating iOS tab bar icons
-generate.py is a script for converting Font Awesome icons to iOS tab bar icons.
+generate.py is a Python script for converting Font Awesome icons to iOS tab bar icons.
 ImageMagick should be in the PATH and called 'convert', and the output is written
 to the directory 'png'.
 
