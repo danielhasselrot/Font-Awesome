@@ -1,10 +1,21 @@
-Font Awesome, the iconic font designed for use with Twitter Bootstrap
+##Font Awesome, the iconic font designed for use with Twitter Bootstrap
 
 The full suite of pictographic icons, examples, and documentation can be found at:
 http://fortawesome.github.com/Font-Awesome/
 
-### Generating iOS tab bar icons
+###Contact
+- Email: dave@davegandy.com
+- Twitter: http://twitter.com/fortaweso_me
+- Work: http://lemonwi.se co-founder
 
+###License
+The Font Awesome webfont, CSS, and LESS files are licensed under CC BY 3.0:
+http://creativecommons.org/licenses/by/3.0/
+A mention of 'Font Awesome - http://fortawesome.github.com/Font-Awesome'
+in human-readable source code is considered acceptable attribution.
+
+
+### Generating iOS tab bar icons
 generate.py is a script for converting Font Awesome icons to iOS tab bar icons.
 ImageMagick should be in the PATH and called 'convert', and the output is written
 to the directory 'png'.
