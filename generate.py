@@ -33,7 +33,7 @@ import errno
 def parse_names(css_fn):
     with file(css_fn, 'r') as css_file:
         css_text = css_file.read()
-        matches = re.findall(r'.icon-([^:]+):before {\n\s*content: "\\([^"]+)"', css_text, re.MULTILINE)
+        matches = re.findall(r'.icon-([^:]+):before\s+{\s*content: "\\([^"]+)"', css_text, re.MULTILINE)
         return dict(
             (int(codepoint_string, 16), icon_name) for (icon_name, codepoint_string) in matches
         )
